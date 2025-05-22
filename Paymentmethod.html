@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Method</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: antiquewhite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 300px;
+      background-color: cadetblue;
+      border-radius: 19px;
+    }
+
+    .method {
+      padding: 15px;
+      background-color: #ffcc80;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .method:hover {
+      background-color: #ffa726;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="method"><a href="creditcardpage.html">Credit Card</a></button>
+    <button class="method"><a href="upidetails.html">UPI</a></button>
+    <button class="method"><a href="debitcard.html">Debit Card</a></button>
+  </div>
+</body>
+</html>

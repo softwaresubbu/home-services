@@ -1,0 +1,340 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .heading{
+      margin-left: -85px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: #ff9800;
+    }
+    .items{
+      display: flex;
+      gap: 10px;
+    }
+    .count{
+      border-radius: 5px;
+      width: 80px;
+      height: 20px;
+    }
+    .money{
+    font-weight: 600;
+    font-size: 1rem;
+    }
+    .bill{
+      border-radius: 5px;
+      width: 100px;
+      height: 20px;
+    }
+    .bill:hover{
+      background-color: red;
+    }
+
+    .login button {
+      background-color: #ff9800;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: -70px;
+    }
+
+    .login button a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login button:hover {
+      background-color: #e68900;
+    }
+
+    #about {
+      padding: 60px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .about {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .para {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    .frameing {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .images {
+      width: 200px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #services {
+      background-color: #f0f0f0;
+      padding: 60px 20px;
+    }
+
+    .change {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .service {
+      background-color: #fff;
+      margin: 20px auto;
+      max-width: 1000px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover {
+      transform: scale(1.02);
+    }
+
+    .hed {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .frame {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .imacle {
+      width: 220px;
+      height: 160px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .cleandisc {
+      flex: 1;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .price-cart-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .cart-button {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cart-button:hover {
+      background-color: #218838;
+    }
+
+    #contact {
+      padding: 60px 20px;
+      background-color: gray;
+    }
+
+    .col {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .map iframe {
+      width: 100%;
+      max-width: 500px;
+      height: 350px;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    #icons {
+      font-size: 30px;
+      color: white;
+    }
+
+    #icons1 {
+      color: blue;
+      font-size: 25px;
+    }
+
+    .location {
+      font-size: 18px;
+    }
+
+    .address {
+      color: white;
+    }
+
+    .mapsize {
+      width: 500px;
+      height: 300px;
+    }
+
+    .text {
+      flex: 1;
+      color: #fff;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+
+    #portfolio {
+      padding: 60px 20px;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+
+    .connect {
+      font-size: 17px;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .footicons {
+      gap: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .frame,
+      .frameing {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .imacle {
+        width: 100%;
+        height: auto;
+      }
+
+      .mapsize {
+        width: 100%;
+      }
+    }
+  

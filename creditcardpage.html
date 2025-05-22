@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        body{
+    background-color: antiquewhite;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+     }
+     .container{
+        background-color: aqua;
+        width: 800px;
+        padding: 30px;
+        border-radius: 10px;
+        height: 700px;
+     }
+     .heading{
+        
+        text-align: center;
+        background-color: black;
+        color: white;
+        height: 150px;
+        margin-top: 10px;
+        border-radius: 10px;
+
+     }
+     .fa-credit-card{
+        font-size: 24px;
+        margin-top: 10px;
+        margin-left: 10px;
+
+     }
+     
+     
+     .heading p{
+        font-size: 24px;
+        margin-top: 10px;
+     }
+     .image{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+     }
+     .imeg{
+        width: 60px;
+        height: auto;
+        margin: 0 5px;
+        height: 60px;
+        
+     }
+     .information{
+        margin-top: 20px;
+        display: grid;
+        
+     }
+     form{
+        display: flex;
+        flex-direction: column;
+     }
+     label{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 600;
+     }
+     input{
+        padding: 8px;
+        margin: 2px solid orange;
+        border-radius: 5px;
+     }
+     
+     
+     .botton{
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 6px;
+        border-radius: 10px;
+        background-color: orange;
+     }
+     .botton:hover{
+        background-color: blue;
+     }
+
+        
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header class="heading">
+        <i class="fa-solid fa-credit-card"></i><p>Credit Card Information</p>
+        <div class="image">
+            <img class="imeg" src="card symble.jpg" alt="">
+            <img class="imeg"  src="card3.jpg" alt="">
+            <img class="imeg" src="symble.jpg" alt="">
+        </div>
+        </header>
+        
+            <form >
+                <label for="Card Number"> Card Number</label>
+                <input type="number" name="number" id="number" required><br>
+                <label for="Security Code">Security Code</label>
+                <input type="password" name="password" id="password" required><br>
+                
+                <label for="Exp.Month">Exp.Month</label>
+                <input type="month" name="month" id="month">
+                
+                <label for="Exp.Year">Exp.Year</label><br>
+                <input type="month" name="month" id="month" required>
+
+                
+                <label for="Nome Of The Cord">Name Of The Card</label>
+                <input type="text" name="Card Name" id="Card Name" required>
+                <button class="botton"><a href="succsessmodelbox.html">Submit</a></button>
+                 
+
+
+
+
+
+            </form>
+        
+        </div>
+
+    
+    
+</body>
+</html>

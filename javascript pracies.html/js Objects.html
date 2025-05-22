@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+       // 1)arrey fetching elements
+        var Siva = ['Subbu','nani','srinu','mahi']
+        console.log(Siva)
+        console.log(Siva[1])
+        console.log(Siva.indexOf("srinu"))
+        //2) boject fectiching element by using "key" value
+        var Siva = {name:"Subbu",age:24,Qualification:"B.tech"}
+        console.log(Siva)
+        console.log(Siva.name)
+        console.log(Siva["name"])
+        Siva.location = "Guntur"
+        console.log(Siva)
+        Siva["age"] = 25
+        console.log(Siva)
+        //1)Step -1
+        // first Create a function then by help of function we can create number of objects
+        function details(n,a,l,q){
+            this.name = n
+            this.age = a
+            this.location = l
+            this.qualification = q
+        
+        } 
+        //2)Step-2
+        // Create the no.of objects by using function
+        var user1 = new details("nani",23,"Guntur","B.tech")
+        user1.marrid = "no"
+        user1["gender"] = "male"
+        console.log(user1)
+        var user2 = new details("Srinu",29,"Hyderabad","assosiated enginner")
+        console.log(user2)
+        //2) question
+        function details(name,age,location,marrid,gender){
+            this. Name = "name";
+            this.Age = age
+            this.Location = "Guntur"
+            this.Marrid = "no"
+            this.Gender = "Male"
+
+        }
+        var user1 = new details("Nani",24,"Guntur","no","male")
+        console.log(user1)
+        var user2 = new details("Srinu",30,"Hyderabad","yes","male")
+        console.log(user2)
+        var details = new Object()
+        details. name = "Subbu"
+        details["age"] = 24 
+        console.log(details)
+        
+    </script>
+</body>
+</html>

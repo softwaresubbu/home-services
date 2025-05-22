@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Basic Homepage - Home Services</title>
+  <link rel="stylesheet" href="homepage.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <h1 class="heading">Welcome to My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="items">
+  <i class="fa-solid fa-cart-shopping" id="icons"></i>
+  <label>Items in Cart:</label>
+  <input type="text" id="item-count" class="count" readonly />
+
+  <label>Total Cost:</label>
+  <input type="text" id="total-cost" class="count" readonly />
+
+  <button class="bill"><a href="Paymentmethod.html">Payment</a></button>
+</div>
+
+      <div class="login">
+        <button><a href="newloginpage.html">Login</a></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="about">About Us</h2>
+    <p class="para">We are passionate about providing top-quality home services to our clients, focusing on reliability, quality, and customer satisfaction.</p>
+    <div class="frameing">
+      <img class="images" src="plumb.avif" alt="Plumbing" data-aos="fade-up">
+      <img class="images" src="clean.avif" alt="Cleaning" data-aos="fade-up" data-aos-delay="100">
+      <img class="images" src="Electrical.jpg" alt="Electrical" data-aos="fade-up" data-aos-delay="200">
+      <img class="images" src="renovation.avif" alt="Home Renovation" data-aos="fade-up" data-aos-delay="300">
+      <img class="images" src="Bathroom Clean.avif" alt="Bathroom Cleaning" data-aos="fade-up" data-aos-delay="400">
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2 class="change">Our Home Services</h2>
+    <div class="service" data-aos="fade-right">
+      <h3 class="hed">Cleaning Services</h3>
+      <strong>Professional cleaning for homes, offices, and more.</strong>
+      <div class="frame">
+        <img class="imacle" src="cleen2.avif" alt="Cleaning Work">
+        <div class="cleandisc">We make it easy to keep your space spotless. Our professional house cleaning services include dusting, mopping, vacuuming, and sanitizing all major surfaces...</div>
+        <div class="price-cart-box">
+          <span class="price">Per Hour: $20</span>
+          <button class="cart-button">Add Cart</button>
+        </div>
+      </div>
+    </div>
+    <div id="services-container"></div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <h2 class="col">Our Clients</h2>
+    <div class="service" data-aos="zoom-in">
+      <p>We are currently working with clients such as <strong>Aparna</strong>, <strong>Vasavi</strong>, <strong>L&T</strong>, and <strong>Mega</strong>.</p>
+    </div>
+    <div class="frameing">
+      <img class="images" src="aparna.jpg" alt="Aparna" data-aos="fade-up">
+      <img class="images" src="lt.jpg" alt="L&T" data-aos="fade-up" data-aos-delay="100">
+      <img class="images" src="vasavi.jpg" alt="Vasavi" data-aos="fade-up" data-aos-delay="200">
+      <img class="images" src="mega.jpg" alt="Mega" data-aos="fade-up" data-aos-delay="300">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="col">Contact Us</h2>
+    <div class="contact-container">
+      <div class="map-box">
+        <i class="fa-solid fa-location-dot" id="icons"></i> <strong class="location">Location</strong>
+        <p class="address">PRIME HEMADRI TOWERS, Bagh Ameer, Sumitra Nagar Colony,<br> Kukatpally, Hyderabad, Telangana 500072</p>
+        <iframe class="mapsize" src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="form-box">
+        <i class="fa-solid fa-envelope" id="icons1"></i><p class="connect">Email us at <a href="mailto:contact@example.com">contact@example.com</a></p>
+        <i class="fa-solid fa-envelope" id="icons1"></i><p class="connect">Email us at <a href="mailto:subbareddycyetechnology@gmail.com">subbareddycyetechnology@gmail.com</a></p>
+        <i class="fa-solid fa-phone" id="icons1"></i><p class="connect">Mobile Number: +91 9182248514</p>
+
+        <div class="contact-form">
+          <h3>Quick Message</h3>
+          <input type="text" id="name" placeholder="Your Name" />
+          <input type="email" id="email" placeholder="Your Email" />
+          <textarea id="message" placeholder="Your Message"></textarea>
+          <button onclick="submitForm()">Send</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footicons">
+      <i class="fa-brands fa-facebook" id="icons"></i>
+      <i class="fa-brands fa-square-instagram" id="icons"></i>
+      <i class="fa-brands fa-x-twitter" id="icons"></i>
+      <i class="fa-brands fa-line" id="icons"></i>
+      <i class="fa-brands fa-youtube" id="icons"></i>
+    </div>
+    <p>&copy; <span id="year"></span> My Website. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        navLinks.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+
+    function submitForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      alert(`Thank you, ${name}! Your message has been sent.`);
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    }
+
+    const servicesData = [
+      {
+        title: "Plumbing",
+        desc: "Expert plumbing solutions for any issue, big or small.",
+        image: "plumb.avif",
+        details: "From leaky faucets and clogged drains to complete pipeline installations...",
+        price: "$25/hr"
+      },
+      {
+        title: "Electrical Repairs",
+        desc: "Safe and reliable electrical services for residential and commercial spaces.",
+        image: "Electrical.jpg",
+        details: "We offer wiring installations, circuit replacements, and emergency repairs...",
+        price: "$30/hr"
+      },
+      {
+        title: "Landscaping",
+        desc: "Design gardens and enhance outdoor spaces.",
+        image: "land scaping.avif",
+        details: "We design your outdoor space with style, plants, and hardscaping...",
+        price: "$40/hr"
+      }
+    ];
+
+    const servicesContainer = document.getElementById("services-container");
+    servicesData.forEach((service, index) => {
+      const direction = index % 2 === 0 ? 'fade-right' : 'fade-left';
+      const serviceHTML = `
+        <div class="service" data-aos="${direction}">
+          <h3 class="hed">${service.title}</h3>
+          <strong>${service.desc}</strong>
+          <div class="frame">
+            <img class="imacle" src="${service.image}" alt="${service.title}">
+            <div class="cleandisc">${service.details}</div>
+            <div class="price-cart-box">
+              <span class="price">Per Hour: ${service.price}</span>
+              <button class="cart-button">Add Cart</button>
+            </div>
+          </div>
+        </div>`;
+      servicesContainer.innerHTML += serviceHTML;
+    });
+    let totalItems = 0;
+let totalCost = 0;
+
+const cartButtons = document.querySelectorAll('.cart-button');
+
+// Get header input fields using new IDs
+const itemCountInput = document.getElementById('item-count');
+const totalCostInput = document.getElementById('total-cost');
+
+// Initialize the display
+itemCountInput.value = totalItems;
+totalCostInput.value = `$${totalCost.toFixed(2)}`;
+
+cartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Find the price near the clicked button
+    const priceText = button.parentElement.querySelector('.price').textContent;
+    const priceValue = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+
+    // Update cart totals
+    totalItems++;
+    totalCost += priceValue;
+
+    // Display updated values
+    itemCountInput.value = totalItems;
+    totalCostInput.value = `$${totalCost.toFixed(2)}`;
+  });
+});
+
+  </script>
+
+</body>
+</html>

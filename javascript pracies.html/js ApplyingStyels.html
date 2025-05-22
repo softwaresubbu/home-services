@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applying Style Sheets On Css</title>
+    <style>
+        .second{
+            background-color: red;
+        }
+        .third{
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<div id="first" >
+        <p>Heloo This Is Subba Reddy</p>
+    </div>--->
+    <div id="first" class="second">
+        <p>This Is Subba Reddy</p>
+
+    </div>
+
+    <script>
+        var nani =document.getElementById("first")
+        //Applying the style sheet
+        nani.style.color = "blue"
+        //creating another  class for the parent
+        nani.classList.add('third')
+        // Removing the class
+        nani.classList.remove('third')
+        
+// creating the class for parent or any chaild elements
+        nani.setAttribute('class','second')
+        console.log(nani.getAttribute('class'))
+        var naniClass = document.getElementsByClassName("second")
+        naniClass.style.backgroundColor = "red"
+        
+
+        
+        
+    </script>
+</body>
+</html> 

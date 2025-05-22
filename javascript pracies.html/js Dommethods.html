@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Methods</title>
+</head>
+<body>
+    <div id="subbu">
+        <p id="srinu"> Good Morning Hello How Are Doing today... </p>
+        <p> Yeah i am Doing well thanks for asking</p>
+
+
+    </div>
+    <script>
+    var subbu = document.createElement('p') 
+    subbu.innerText = "what about you...!"
+    var nani = document.getElementById("first") 
+    //1)Adding the element
+    nani.appendChild(subbu)
+    // 2)ading the element befeore insert the element
+    nani.insertBefore(subbu,srinu)
+    //3)Removing the element by using id or anything
+    srinu.remove()
+    //4) Removing the  chaild element by using parent
+    var mallareddy = document.getElementById("first")
+    var ramanjamma = document.getElementById("srinu")
+    mallareddy.removeChild(ramanjamma)
+    //5)Replacing the chaild eliments
+    
+var first = document.createElement('h1')
+first.innerText = "My name Subba Reddy"
+var second = document.getElementById("subbu")
+second.appendChild(first)
+var nani = document.getElementById("srinu")
+nani.replaceChild(first)
+
+
+
+
+    // print all maters with out tag we are using this
+   // console.log(nani.innerText)
+    // print with tag and all matters we are using this
+   // console.log(nani.innerHTML)
+    
+
+
+    </script>
+</body>
+</html>

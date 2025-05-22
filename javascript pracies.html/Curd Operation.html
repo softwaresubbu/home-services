@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Details</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: aqua;
+      font-family: Arial, sans-serif;
+    }
+    .farm-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .farm {
+      width: 350px;
+      background-color: red;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+    }
+    .Buton {
+      border-radius: 5px;
+      color: white;
+      background: transparent;
+      padding: 5px 10px;
+      margin-top: 10px;
+      border: 1px solid white;
+      cursor: pointer;
+    }
+    .Buton:hover {
+      background-color: green;
+    }
+    .redious {
+      border-radius: 5px;
+      padding: 5px;
+      width: 80%;
+      margin-top: 5px;
+    }
+    .enter {
+      font-size: 18px;
+      color: white;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+    .Container {
+      width: 60%;
+      margin: 2% auto;
+      background-color: antiquewhite;
+      padding: 20px;
+    }
+    .Head {
+      background-color: cadetblue;
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      font-weight: 600;
+    }
+    .add {
+      padding: 5px 10px;
+      background: transparent;
+      border-radius: 5px;
+      border: 1px solid white;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .add:hover {
+      background-color: red;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    button {
+      padding: 5px 10px;
+      margin: 2px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="farm-overlay" id="formOverlay">
+    <div class="farm">
+      <div class="enter">
+        <label>Name</label><br>
+        <input class="redious" type="text" id="mobileName">
+      </div>
+      <div class="enter">
+        <label>Price</label><br>
+        <input class="redious" type="number" id="mobilePrice">
+      </div>
+      <div class="enter">
+        <label>RAM</label><br>
+        <input class="redious" type="text" id="mobileRam">
+      </div>
+      <div class="enter">
+        <label>Storage</label><br>
+        <input class="redious" type="text" id="mobileStorage">
+      </div>
+      <button class="Buton" id="saveBtn">Save</button>
+      <button class="Buton" id="cancelBtn">Cancel</button>
+    </div>
+  </div>
+
+  <div class="Container">
+    <div class="Head">
+      <h1>Manage Mobiles</h1>
+      <button class="add">Add Mobile</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Mobile</th>
+          <th>Price (Rs)</th>
+          <th>RAM</th>
+          <th>Storage</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="mobileData">
+        <!-- Mobile rows will be added here automatically -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const mobiles = [
+      { name: "Samsung Galaxy A14", price: 18500, ram: "6GB", storage: "128GB" },
+      { name: "Redmi Note 11", price: 14500, ram: "4GB", storage: "64GB" },
+      { name: "Realme Narzo 50", price: 16999, ram: "6GB", storage: "128GB" },
+      { name: "iQOO Z7 5G", price: 17999, ram: "6GB", storage: "128GB" }
+    ];
+
+    let editIndex = null;
+
+    function addMobileRow(mobile, index) {
+      const table = document.getElementById("mobileData");
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td>${mobile.name}</td>
+        <td>${mobile.price}</td>
+        <td>${mobile.ram}</td>
+        <td>${mobile.storage}</td>
+        <td>
+          <button onclick="editRow(${index})">Edit</button>
+          <button onclick="deleteRow(${index})">Delete</button>
+        </td>
+      `;
+
+      table.appendChild(row);
+    }
+
+    function renderTable() {
+      const table = document.getElementById("mobileData");
+      table.innerHTML = "";
+      mobiles.forEach((mobile, index) => addMobileRow(mobile, index));
+    }
+
+    function deleteRow(index) {
+      mobiles.splice(index, 1);
+      renderTable();
+    }
+
+    function editRow(index) {
+      const mobile = mobiles[index];
+      document.getElementById("mobileName").value = mobile.name;
+      document.getElementById("mobilePrice").value = mobile.price;
+      document.getElementById("mobileRam").value = mobile.ram;
+      document.getElementById("mobileStorage").value = mobile.storage;
+
+      editIndex = index;
+      document.getElementById("formOverlay").style.display = "flex";
+    }
+
+    document.querySelector(".add").addEventListener("click", () => {
+      editIndex = null;
+      document.getElementById("mobileName").value = "";
+      document.getElementById("mobilePrice").value = "";
+      document.getElementById("mobileRam").value = "";
+      document.getElementById("mobileStorage").value = "";
+      document.getElementById("formOverlay").style.display = "flex";
+    });
+
+    document.getElementById("cancelBtn").addEventListener("click", () => {
+      document.getElementById("formOverlay").style.display = "none";
+    });
+
+    document.getElementById("saveBtn").addEventListener("click", () => {
+      const name = document.getElementById("mobileName").value;
+      const price = document.getElementById("mobilePrice").value;
+      const ram = document.getElementById("mobileRam").value;
+      const storage = document.getElementById("mobileStorage").value;
+
+      const mobile = { name, price: parseInt(price), ram, storage };
+
+      if (editIndex !== null) {
+        mobiles[editIndex] = mobile;
+      } else {
+        mobiles.push(mobile);
+      }
+
+      renderTable();
+      document.getElementById("formOverlay").style.display = "none";
+    });
+
+    window.onload = renderTable;
+  </script>
+</body>
+</html>

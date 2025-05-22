@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var amount = +prompt("Enter the amount")
+        var send = +prompt("Enter the sending amount")
+        var remaining;
+         
+        if(amount>send){
+            alert("Befor sending u have a:" +amount)
+            console.log("Success fully sended")
+
+            remaining = amount - send
+            alert("remaining balance is:"+remaining)
+
+        }
+        else if(amount ==send){
+            console.log("Success Fully Sendend"+amount)
+            remaining = amount - send
+            alert("after sending the money U dont have any extra balance:"+remaining)
+        }
+
+        
+        else{
+            alert("U dont have sufficent ammount pleasch check the balance:"+amount)
+        }
+    </script>
+</body>
+</html>

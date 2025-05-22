@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: url('./login.back.jpeg') no-repeat center center/cover;
+      font-size: 16px;
+    }
+    .main {
+      position: relative;
+      background: #fffe7714;
+      border: 3px solid orange;
+      border-radius: 10px;
+      height: 400px;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .login {
+      color: orange;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .inputbox {
+      width: 100%;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .inputbox input {
+      width: 250px;
+      height: 35px;
+      border-radius: 5px;
+      text-align: center;
+      position: relative;
+      border: 4px solid orange;
+      padding: 10px;
+    }
+    .inputbox label {
+      position: absolute;
+      top: -20px;
+      left: 10px;
+      color: white;
+      font-size: 1rem;
+    }
+    .remember {
+      display: flex;
+      justify-content: space-between;
+      width: 250px;
+      margin-bottom: 20px;
+    }
+    .remember a {
+      color: white;
+      font-size: 1rem;
+    }
+    .login2 {
+      width: 250px;
+      height: 40px;
+      background-color: orange;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .login2:hover {
+      background-color: rgb(108, 25, 218);
+    }
+    .register {
+      margin-top: 20px;
+      color: white;
+      font-size: 1rem;
+    }
+    .register a {
+      color: orange;
+    }
+
+    /* Media Query for mobile responsiveness */
+    @media (max-width: 600px) {
+      .main {
+        width: 80%;
+        height: auto;
+      }
+      .inputbox input {
+        width: 80%;
+      }
+      .inputbox label {
+        font-size: 1rem;
+      }
+      .login2 {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <h2 class="login">Login</h2>
+    <form action="#">
+      <div class="inputbox">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <label for="email">Please Enter The Email</label>
+      </div>
+      <div class="inputbox">
+        <input type="password" id="password" placeholder="Enter your password" required />
+        <label for="password">Enter The Correct Password</label>
+      </div>
+      <div class="remember">
+        <label><input type="checkbox" /> Remember Me</label>
+        <a href="#">Forget Password?</a>
+      </div>
+      <button type="submit" class="login2">Login</button>
+      <div class="register">
+        Don’t have an account? <a href="Rigistration.html">Register Here</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

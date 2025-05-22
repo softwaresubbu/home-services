@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Onboarding Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+    body {
+      background-color: bisque;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .head {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 2px solid orange;
+      border-radius: 10px;
+      padding: 20px;
+      width: 100%;
+      max-width: 800px;
+    }
+    .heading {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .gaidence {
+      color: red;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .lable {
+      color: orange;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    .input {
+      height: 35px;
+      border-radius: 8px;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+    }
+    .buton {
+      margin-top: 20px;
+      color: orange;
+      width: 200px;
+      align-self: center;
+      border-radius: 5px;
+      background: transparent;
+      border: 1px solid white;
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .buton:hover {
+      background-color: deepskyblue;
+      color: white;
+    }
+    h2 {
+      margin-top: 20px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="head">
+    <h1 class="heading">New Employee Onboarding</h1>
+    <h6 class="gaidence">Please help us prepare for your arrival by reviewing and addressing the questions below</h6>
+    <form class="form" action="#">
+      
+      <label class="lable" for="first-name"><i class="fa-solid fa-user"></i> First Name</label>
+      <input class="input" type="text" id="first-name" name="first-name" required />
+
+      <label class="lable" for="last-name"><i class="fa-solid fa-user"></i> Last Name</label>
+      <input class="input" type="text" id="last-name" name="last-name" required />
+
+      <label class="lable" for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+      <input class="input" type="email" id="email" name="email" required />
+
+      <label class="lable" for="phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+      <input class="input" type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+
+      <label class="lable" for="position"><i class="fa-solid fa-briefcase"></i> Position</label>
+      <input class="input" type="text" id="position" name="position" />
+
+      <h2>Address</h2>
+
+      <label class="lable" for="city"><i class="fa-solid fa-city"></i> City</label>
+      <input class="input" type="text" id="city" name="city" />
+
+      <label class="lable" for="region"><i class="fa-solid fa-location-dot"></i> Region</label>
+      <input class="input" type="text" id="region" name="region" />
+
+      <label class="lable" for="zipcode"><i class="fa-solid fa-map-pin"></i> Zipcode</label>
+      <input class="input" type="text" id="zipcode" name="zipcode" />
+
+      <label class="lable" for="location"><i class="fa-solid fa-location-crosshairs"></i> Location</label>
+      <input class="input" type="text" id="location" name="location" />
+
+      <button type="submit" class="buton">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
